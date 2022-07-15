@@ -1,0 +1,143 @@
+require: 
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  Exclude:
+    - bin/*
+    - config.ru
+    - config/application.rb
+    - config/boot.rb
+    - config/environment.rb
+    - config/environments/development.rb
+    - config/environments/production.rb
+    - config/environments/test.rb
+    - config/initializers/airbrake.rb
+    - config/initializers/application_controller_renderer.rb
+    - config/initializers/backtrace_silencers.rb
+    - config/initializers/cookies_serializer.rb
+    - config/initializers/filter_parameter_logging.rb
+    - config/initializers/inflections.rb
+    - config/initializers/mime_types.rb
+    - config/initializers/wrap_parameters.rb
+    - config/puma.rb
+    - config/spring.rb
+    - db/schema.rb
+    - db/seeds/**/*
+    - Gemfile.lock
+    - Rakefile
+    - script/rails
+
+Gemspec/RequiredRubyVersion:
+  Description: "https://docs.rubocop.org/rubocop/1.31/cops_gemspec.html#gemspecrequiredrubyversion"
+  Enabled: false
+
+Lint/AmbiguousAssignment:
+  Description: Checks for mistyped shorthand assignments.
+  Enabled: false
+
+Lint/AmbiguousOperator:
+  Description: Checks for ambiguous operators in the first argument of a method invocation without parentheses.
+  Enabled: false
+
+Lint/DisjunctiveAssignmentInConstructor:
+  Description: Checks constructors for disjunctive assignments (||=) that should be plain assignments.
+  Enabled: false
+
+Lint/EmptyInPattern:
+  Description: Checks for the presence of in pattern branches without a body.
+  Enabled: false
+
+Lint/NoReturnInBeginEndBlocks:
+  Description: Checks for the presence of a return inside a begin..end block in assignment contexts
+  Enabled: true
+
+Lint/AmbiguousBlockAssociation:
+  Description: Checks for ambiguous block association with method when param passed without parentheses.
+  Enabled: true
+
+Metrics/AbcSize:
+  Description: Checks that the ABC size of methods is not higher than the configured maximum.
+  Enabled: true
+  Max: 30
+
+Metrics/ClassLength:
+  Description: Avoid class longer than 200 lines
+  Enabled: true
+  Max: 200
+
+Metrics/MethodLength:
+  Description: Checks if the length of a method exceeds some maximum value.
+  Enabled: false
+
+Metrics/ModuleLength:
+  Description: Avoid module longer than 200 lines
+  Enabled: true
+  Max: 200
+
+Metrics/ParameterLists:
+  Description: Checks for methods with too many parameters.
+  Enabled: true
+  CountKeywordArgs: true
+  Max: 5
+
+Metrics/CyclomaticComplexity:
+  Description: Checks that the cyclomatic complexity of methods is not higher than the configured maximum.
+  Enabled: true
+  Max: 7
+
+Naming/VariableNumber:
+  Description: Makes sure that all numbered variables use the configured style, snake_case, normalcase, or non_integer, for their numbering.
+  EnforcedStyle: snake_case
+
+RSpec/EmptyExampleGroup:
+  Exclude:
+    - spec/factories/*
+
+RSpec/EmptyLineAfterExampleGroup:
+  Exclude:
+    - spec/factories/*
+
+RSpec/MissingExampleGroupArgument:
+  Exclude:
+    - spec/factories/*
+
+SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: space
+
+Style/Documentation:
+  Description: Checks for missing top-level documentation of classes and modules.
+  Enabled: false
+
+Style/Lambda:
+  Description: (by default) checks for uses of the lambda literal syntax for single line lambdas, and the method call syntax for multiline lambdas.
+  EnforcedStyle: literal
+
+Style/PercentLiteralDelimiters:
+  Description: Enforces the consistent usage of %-literal delimiters.
+  PreferredDelimiters:
+    '%i': '[]'
+    '%I': '[]'
+    '%r': ()
+    '%w': '[]'
+    '%W': '[]'
+
+Style/PercentQLiterals:
+  Description: Checks for usage of the %Q() syntax when %q() would do.
+  EnforcedStyle: upper_case_q
+
+Style/StringLiterals:
+  Description: Checks if uses of quotes match the configured preference.
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  Description: Checks that quotes inside the string interpolation match the configured preference.
+  EnforcedStyle: single_quotes
+
+Style/TrailingCommaInArrayLiteral:
+  Description: Checks for trailing comma in array literals.
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  Description: Checks for trailing comma in hash literals.
+  EnforcedStyleForMultiline: comma
