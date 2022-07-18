@@ -11,6 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = "Custom Style Guide for Getninjas"
   spec.description = "Write a longer description or delete this line."
   spec.required_ruby_version = ">= 2.6.0"
+  spec.files = ['rubocop.yml']
 
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }

@@ -1,2 +1,0 @@
-inherit_from:
-  - ./lib/rubocop_getninjas.rb
