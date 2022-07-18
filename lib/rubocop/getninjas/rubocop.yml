@@ -1,6 +1,7 @@
 require: 
   - rubocop-rspec
   - rubocop-performance
+  - rubocop-rails
 
 AllCops:
   Exclude:
@@ -101,9 +102,6 @@ RSpec/EmptyLineAfterExampleGroup:
 RSpec/MissingExampleGroupArgument:
   Exclude:
     - spec/factories/*
-
-SpaceAroundEqualsInParameterDefault:
-  EnforcedStyle: space
 
 Style/Documentation:
   Description: Checks for missing top-level documentation of classes and modules.

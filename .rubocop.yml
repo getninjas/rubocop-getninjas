@@ -1,5 +1,5 @@
 inherit_from:
-  - .rubocop_getninjas.yml
+  - ./lib/rubocop/getninjas/rubocop.yml
 
 AllCops:
   CacheRootDirectory: tmp/rubocop
