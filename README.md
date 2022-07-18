@@ -24,11 +24,11 @@ $ gem install rubocop-getninjas
 
 ## Setup
 
-Crie na pasta root de seu projeto o arquivo yml `.rubocop.yml`. Neste arquivo você importará o arquivo de configuração desta biblioteca.
+Crie na pasta root de seu projeto o arquivo yml `.rubocop.yml` e adicione essa linha no topo do arquivo.
 
 ```
-require:
-  - rubocop-getninjas
+inherit_gem:
+  rubocop-getninjas: rubocop.yml
 
 ```
 
