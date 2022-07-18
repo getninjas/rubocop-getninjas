@@ -1,2 +1,8 @@
 inherit_from:
-  - ./cop/rubocop.yml
+  - .rubocop_getninjas.yml
+
+AllCops:
+  CacheRootDirectory: tmp/rubocop
+
+Rails:
+  Enabled: false
