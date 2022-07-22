@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Write a longer description or delete this line.'
   spec.required_ruby_version = '>= 2.6.0'
   spec.files = `git ls-files`.split($/)
-
+  spec.bindir = 'exe'
   spec.executables   = %w(rubocop-getninjas)
   spec.require_paths = ['lib']
 
