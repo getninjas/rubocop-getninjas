@@ -3,10 +3,10 @@
 require_relative 'lib/rubocop/getninjas/version'
 
 Gem::Specification.new do |spec|
-  spec.name = "rubocop-getninjas"
+  spec.name = 'rubocop-getninjas'
   spec.version = Rubocop::Getninjas::VERSION
-  spec.authors = ["Victor Giraldes"]
-  spec.email = ["victorpgiraldes@gmail.com"]
+  spec.authors = ['Victor Giraldes']
+  spec.email = ['victorpgiraldes@gmail.com']
 
   spec.summary = 'Custom Style Guide for Getninjas'
   spec.description = 'Write a longer description or delete this line.'
@@ -24,5 +24,4 @@ Gem::Specification.new do |spec|
   spec.add_dependency('rubocop-rspec', '~> 2.12.0')
   spec.add_dependency('thor')
   spec.add_development_dependency('rspec', '~> 3.5')
-  spec.add_development_dependency('pry')
 end
