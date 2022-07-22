@@ -11,7 +11,6 @@ Gem::Specification.new do |spec|
   spec.summary = 'Custom Style Guide for Getninjas'
   spec.description = 'Write a longer description or delete this line.'
   spec.required_ruby_version = '>= 2.6.0'
-  binding.pry
   spec.files = `git ls-files`.split($/)
 
   spec.bindir        = 'bin'
