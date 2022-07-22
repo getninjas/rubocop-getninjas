@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "lib/rubocop/getninjas/version"
+require_relative 'lib/rubocop/getninjas/version'
 
 Gem::Specification.new do |spec|
   spec.name = "rubocop-getninjas"
@@ -8,13 +8,14 @@ Gem::Specification.new do |spec|
   spec.authors = ["Victor Giraldes"]
   spec.email = ["victorpgiraldes@gmail.com"]
 
-  spec.summary = "Custom Style Guide for Getninjas"
-  spec.description = "Write a longer description or delete this line."
-  spec.required_ruby_version = ">= 2.6.0"
-  spec.files = ['rubocop.yml']
+  spec.summary = 'Custom Style Guide for Getninjas'
+  spec.description = 'Write a longer description or delete this line.'
+  spec.required_ruby_version = '>= 2.6.0'
+  binding.pry
+  spec.files = `git ls-files`.split($/)
 
-  spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
+  spec.bindir        = 'bin'
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
   # Uncomment to register a new dependency of your gem
@@ -22,5 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency('rubocop-performance', '~> 1.14.2')
   spec.add_dependency('rubocop-rails', '~> 2.15.2')
   spec.add_dependency('rubocop-rspec', '~> 2.12.0')
+  spec.add_dependency('thor')
   spec.add_development_dependency('rspec', '~> 3.5')
+  spec.add_development_dependency('pry')
 end
