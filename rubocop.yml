@@ -60,21 +60,20 @@ Lint/AmbiguousBlockAssociation:
 Metrics/AbcSize:
   Description: Checks that the ABC size of methods is not higher than the configured maximum.
   Enabled: true
-  Max: 30
 
 Metrics/ClassLength:
-  Description: Avoid class longer than 200 lines
+  Description: Avoid class longer than 250 lines
   Enabled: true
-  Max: 200
+  Max: 250
 
 Metrics/MethodLength:
   Description: Checks if the length of a method exceeds some maximum value.
   Enabled: false
 
 Metrics/ModuleLength:
-  Description: Avoid module longer than 200 lines
+  Description: Avoid module longer than 250 lines
   Enabled: true
-  Max: 200
+  Max: 250
 
 Metrics/ParameterLists:
   Description: Checks for methods with too many parameters.
