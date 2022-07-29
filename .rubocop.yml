@@ -3,6 +3,3 @@ inherit_from:
 
 AllCops:
   CacheRootDirectory: tmp/rubocop
-
-Rails:
-  Enabled: false
