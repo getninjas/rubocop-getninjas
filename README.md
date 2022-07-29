@@ -32,7 +32,7 @@ inherit_gem:
 
 ```
 
-Crie na pasta root de seu projeto o arquivo yml `.rubocop.yml` e adicione essa linha no topo do arquivo.
+Crie na pasta root de seu projeto o arquivo yml `.codeclimate.yml` e adicione essa linha no topo do arquivo.
 ```
 inherit_gem:
   rubocop-getninjas: codeclimate.yml
