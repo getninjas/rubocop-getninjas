@@ -11,9 +11,10 @@ Gem::Specification.new do |spec|
   spec.summary = 'Custom Style Guide for Getninjas'
   spec.description = 'Write a longer description or delete this line.'
   spec.required_ruby_version = '>= 2.6.0'
-  spec.files = `git ls-files`.split($/)
-  spec.bindir = 'exe'
-  spec.executables   = %w(rubocop-getninjas)
+  spec.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.license = 'MIT'
+  spec.bindir = 'bin'
+  spec.executables = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
   # Uncomment to register a new dependency of your gem
