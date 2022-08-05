@@ -3,6 +3,9 @@ require:
   - rubocop-performance
   - rubocop-rails
 
+inherit_from:
+  - ./rubocop-todo.yml
+
 AllCops:
   Exclude:
     - bin/*
