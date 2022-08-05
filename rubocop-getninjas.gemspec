@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.license = 'MIT'
   spec.bindir = 'exe'
-  spec.executables   = %w(rubocop-getninjas)
+  spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
   # Uncomment to register a new dependency of your gem
