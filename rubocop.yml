@@ -4,7 +4,7 @@ require:
   - rubocop-rails
 
 inherit_from:
-  - ./rubocop-todo.yml
+  - .rubocop-todo.yml
 
 AllCops:
   Exclude:
